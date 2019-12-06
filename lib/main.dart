@@ -1,8 +1,8 @@
-import 'package:contador/src/app.dart';
+import 'package:flutter/material.dart';
 
 //creamos nosotros
 //import 'src/app.dart';
-import 'package:flutter/material.dart';
+import 'package:contador/src/app.dart';
 
 void main() {
   runApp(MyApp());  
