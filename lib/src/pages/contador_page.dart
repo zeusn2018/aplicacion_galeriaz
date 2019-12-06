@@ -43,14 +43,32 @@ int _conteo = 12;
     return Row(
       mainAxisAlignment: MainAxisAlignment.end,
       children: <Widget>[
-        SizedBox(width: 25.0,),
-        FloatingActionButton(child: Icon(Icons.exposure_zero), onPressed: null ),
+        SizedBox(width: 30.0,),
+        FloatingActionButton(child: Icon(Icons.exposure_zero), onPressed: _reseteo ),
         Expanded(child: SizedBox()),
-        FloatingActionButton(child: Icon(Icons.remove), onPressed: null ),
+        FloatingActionButton(child: Icon(Icons.remove), onPressed: _disminuir ),
         SizedBox(width: 5.0,),
-        FloatingActionButton(child: Icon(Icons.add), onPressed: null ),
+        FloatingActionButton(child: Icon(Icons.add), onPressed: _agregar ),
       ],
     );
+  }
+
+  void _agregar(){
+    setState(() {
+      _conteo++;
+    });    
+  }
+
+  void _disminuir(){
+    setState(() {
+      _conteo--;
+    });    
+  }
+
+  void _reseteo(){
+    setState(() {
+      _conteo = 0;
+    });    
   }
 
 }
