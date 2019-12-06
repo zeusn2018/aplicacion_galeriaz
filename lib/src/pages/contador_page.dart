@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget{
-//TextStyle estiloTexto = new TextStyle( fontSize: 30);
-final estiloTexto = new TextStyle( fontSize: 30);
-final conteo = 10;
+class ContadorPage extends StatefulWidget{
+  
+  @override
+  State<StatefulWidget> createState() => _ContadorPageState() ;
 
-@override
+}
+
+class _ContadorPageState extends State<ContadorPage>{
+final _estiloTexto = new TextStyle( fontSize: 30);
+int _conteo = 12;
+
+  @override
   Widget build(BuildContext context) {
     
     return Scaffold(
@@ -20,9 +26,9 @@ final conteo = 10;
           children: <Widget>[            
             // Text('Numeros de clicks yikyik', style: TextStyle(fontSize: 25)),
             // Text('0', style: TextStyle(fontSize: 25)),
-            Text('Numeros de clicks yikyik', style: estiloTexto),
+            Text('Numeros de clicks yikyik', style: _estiloTexto),
             //Text('0', style: estiloTexto),
-            Text('$conteo', style: estiloTexto),
+            Text('$_conteo', style: _estiloTexto),
 
           ],  
         ),
@@ -32,8 +38,14 @@ final conteo = 10;
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
         onPressed: () {
-          print("avanzado mundo");
-          // conteo = conteo + 1;
+          //print("avanzado mundo");
+          //necesita redibujar el conteo
+          _conteo++;
+          //enonces se aniade para redibujar el widget
+          setState(() {
+            //print("avanzado mun");
+          });
+
         },
       ),
     );
