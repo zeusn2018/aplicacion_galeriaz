@@ -33,21 +33,23 @@ int _conteo = 12;
           ],  
         ),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
-      //floatingActionButton: Text('boo'),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
-        onPressed: () {
-          //print("avanzado mundo");
-          //necesita redibujar el conteo
-          _conteo++;
-          //enonces se aniade para redibujar el widget
-          setState(() {
-            //print("avanzado mun");
-          });
+      floatingActionButton: _crearBotones(),
+      
+    );
+  }
 
-        },
-      ),
+  Widget _crearBotones(){
+
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: <Widget>[
+        SizedBox(width: 25.0,),
+        FloatingActionButton(child: Icon(Icons.exposure_zero), onPressed: null ),
+        Expanded(child: SizedBox()),
+        FloatingActionButton(child: Icon(Icons.remove), onPressed: null ),
+        SizedBox(width: 5.0,),
+        FloatingActionButton(child: Icon(Icons.add), onPressed: null ),
+      ],
     );
   }
 
