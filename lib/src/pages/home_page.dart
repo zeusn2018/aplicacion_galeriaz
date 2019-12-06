@@ -6,7 +6,7 @@ final estiloTexto = new TextStyle( fontSize: 30);
 
 @override
   Widget build(BuildContext context) {
-    // TODO: implement build
+    
     return Scaffold(
       appBar: AppBar(
         title: Text('Titulo_Cartelera'),
@@ -24,6 +24,13 @@ final estiloTexto = new TextStyle( fontSize: 30);
 
           ],  
         ),
+      ),
+      //floatingActionButton: Text('boo'),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: () {
+          print("avanzado mundo");
+        },
       ),
     );
   }
