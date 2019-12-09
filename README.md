@@ -1,5 +1,7 @@
 # Gallery_aplication
 
 A new Flutter project about gallery.
-zeus
+zeus.
+
+Trabajo: MTC
 
